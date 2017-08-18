@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>任务二：零基础HTML及CSS编码（一）</title>
+  <style type="text/css">
+    body, p {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #000;
+    }
+    .main {
+      width: 74%;
+      margin: 0 auto;
+      background: #ececec;
+    }
+    ul{
+      list-style: none;
+    }
+    img {
+      width: 200px;
+      margin: 20px 0;
+    }
+    .header {
+      height: 60px;
+      box-shadow: 1px 2px 0px #ddd;
+      background: #fff;
+    }
+    .logo > img{
+      margin: 0;
+      padding: 10px 10px 10px 20px;
+    }
+    .header ul > li {
+      margin-left: 10px;
+    }
+    .pull-rigth {
+      float: right;
+      padding-right: 20px;
+    }
+    .inline-block {
+      display: inline-block;
+    }
+    .segment {
+      box-shadow: 1px 2px 0px #ddd;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 20px;
+      background: #fff;
+    }
+    .card {
+      width: 400px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+    .card > p {
+      text-align: center;
+      margin: 10px 0 20px 0;
+    }
+    .card > img {
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    ol > li {
+      font-weight: bolder;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+      padding: 4px;
+    }
+    table > thead > tr {
+      background: #666;
+      color: #fff;
+      text-align: left;
+    }
+
+    .footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      height: 60px;
+      border-top: 4px solid #1eb5a8;;
+      line-height: 60px;
+    }
+    h1 {
+      font-size: 22px;
+    }
+    h2 {
+      color: #555;
+      font-size: 18px;
+    }
+    .form {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .form label.control {
+      width: 30%;
+      text-align: right;
+      display: inline-block;
+      margin-right: 10px;
+      float: left;
+    }
+    .form .control-group input[type="text"] {
+      padding: 6px;
+      border: 1px solid #ddd;
+      border-radius:  6px;
+      width: 240px;
+    }
+    .control-group {
+      margin-bottom: 20px;
+    }
+    .control-group > div{
+      display: inline-block;
+    }
+    .msg {
+      color: #9b9b9b;
+      font-size: 0.8em;
+      margin: 6px 0;
+    }
+  .form button {
+    width: 100%;
+    padding: 12px;
+    background: #2377c8;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+  }
+  textarea {
+    width: 66%;
+    height: 100px;
+  }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+      <a href="" class="logo"> <img src="../imgs/logo.png"></a>
+      <ul class="pull-rigth">
+        <li class="inline-block">导航链接一</li>
+        <li class="inline-block">导航链接二</li>
+        <li class="inline-block">导航链接三</li>
+        <li class="inline-block">导航链接四</li>
+      </ul>
+    </div>
+    <div class="segment">
+      <h1>HTML 简史</h1>
+      <h2>什么是 HTML？</h2>
+      <p>文章 作者 发表时间</p>
+      <p>为了更清晰的理解这篇文章，你应该学会使用browser，如果你了解如何创建并编辑文本文件，你就可以自己动手测试本文中的例子了当你在 web 浏览器中浏览网页时，你看到的最基本的内容是文字。这些文字一般有着一些样式特性，比如不同的文字大小和颜色。在多数情况下，页面还会展示图片或者还可能带有视频；有时候会有一个表单，你可以填写信息（或者搜索内容）；<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction">https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction</a>或者可以依据喜好自定义页面的展示效果；页面也经常会带有包含动画效果的内容；页面上有些内容会不断变化而有些内容会保持不变。</p>
+      <img src="../imgs/miao.jpg" />
+      <p>为了更清晰的理解这篇文章，你应该学会使用browser，如果你了解如何创建并编辑文本文件，你就可以自己动手测试本文中的例子了当你在 web 浏览器中浏览网页时，你看到的最基本的内容是文字。这些文字一般有着一些样式特性，比如不同的文字大小和颜色。在多数情况下，页面还会展示图片或者还可能带有视频；有时候会有一个表单，你可以填写信息（或者搜索内容）；<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction">https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction</a>或者可以依据喜好自定义页面的展示效果；页面也经常会带有包含动画效果的内容；页面上有些内容会不断变化而有些内容会保持不变。</p>
+    </div>
+    <div class="segment">
+      <h1>元素——基本的构造区块</h1>
+      <h2>标签</h2>
+      <p>文章 作者 发表时间</p>
+      <p>为了更清晰的理解这篇文章，你应该学会使用browser，如果你了解如何创建并编辑文本文件，你就可以自己动手测试本文中的例子了当你在 web 浏览器中浏览网页时，你看到的最基本的内容是文字。这些文字一般有着一些样式特性，比如不同的文字大小和颜色。在多数情况下，页面还会展示图片或者还可能带有视频；有时候会有一个表单，你可以填写信息（或者搜索内容）；<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction">https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction</a>或者可以依据喜好自定义页面的展示效果；页面也经常会带有包含动画效果的内容；页面上有些内容会不断变化而有些内容会保持不变。</p>
+      <img src="../imgs/miao.jpg" />
+      <ul>
+        <li>导航链接一</li>
+        <li>导航链接二</li>
+        <li>导航链接三</li>
+      </ul>
+    </div>
+    <div class="segment cards">
+      <h1>图片</h1>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+      <div class="card">
+        <p>可爱的小喵~</p>
+        <img src="../imgs/miao.jpg" />
+      </div>
+    </div>
+    <div class="segment">
+      <h1>命名字符参考</h1>
+      <h2>文档类型和注释</h2>
+      <p>文章 作者 发表时间</p>
+      <ol>
+        <li>排名1</li>
+        <li>排名2</li>
+        <li>排名3</li>
+      </ol>
+      <p>下面是一个表格，给表格加了一个border=1 好让你能看出来是一个表格</p>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>表头</th>
+            <th>表头</th>
+            <th>表头</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>表格内容</td>
+            <td>表格内容</td>
+            <td><a href="">操作</a></td>
+          </tr>
+          <tr>
+            <td>表格内容</td>
+            <td>表格内容</td>
+            <td><a href="">操作</a></td>
+          </tr>
+          <tr>
+            <td>表格内容</td>
+            <td>表格内容</td>
+            <td><a href="">操作</a></td>
+          </tr>
+          <tr>
+            <td>表格内容</td>
+            <td>表格内容</td>
+            <td><a href="">操作</a></td>
+          </tr>
+          <tr>
+            <td>总计</td>
+            <td colspan="2">1000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="segment">
+      <h1 style="border-left: #ddd solid 4px; padding-left: 10px;">一个完整且精简的文档</h1>
+      <h2>这篇文章有帮助吗？</h2>
+      <form action="" class="form">
+        <div class="control-group">
+          <label class="control" for="user_name">请输入邮箱地址</label>
+          <div>
+            <input type="text" placeholder="这是一个文本输入框" id="user_name"/>
+            <p class="msg">邮箱地址请按要求格式输入</p>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control" for="psw">请输入密码</label>
+          <input type="text" placeholder="这是一个文本输入框" id="psw"/>
+        </div>
+        <div class="control-group">
+          <label class="control" for="psw_agin">请输入重复密码</label>
+          <div>
+            <input type="text" placeholder="这是一个文本输入框" id="psw_agin" />
+            <p class="msg">密码请为6~16位英文数字</p>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control">性别</label>
+          <input type="radio" name="sex" value="male" id="male" checked /> <label for="male">男</label>
+          <input type="radio" name="sex" value="female" id="female" /> <label for="female">女</label>
+        </div>
+        <div class="control-group">
+          <label class="control">城市</label>
+          <select name="" id="">
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
+            <option value="广州">广州</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label class="control">爱好</label>
+          <input type="checkbox" name="run" value="0" id="run" checked /> <label for="run">运动</label>
+          <input type="checkbox" name="art" value="1" id="art" /> <label for="art">艺术</label>
+          <input type="checkbox" name="other" value="3" id="other" /> <label for="other">科学</label>
+        </div>
+        <div>
+          <label class="control">个人描述</label>
+          <textarea name="" id="" cols="30" rows="2" placeholder="这是一个多行文本输入框"></textarea>
+        </div>
+        <br/>
+        <button type="submit" value="submit">确认提交</button>
+      </form>
+    </div>
+    <p class="footer">版权所有&copy;</p>
+  </div>
+  
+</body>
+</html>
