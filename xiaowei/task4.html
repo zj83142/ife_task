@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>任务四：定位和居中问题</title>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    .main {
+      width: 400px;
+      height: 200px;
+      background: #ccc;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+    .dot {
+      width: 50px;
+      height: 50px;
+      background: #ff0;
+    }
+    .top-left{
+      border-radius: 0 0 100% 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }  
+    .bottom-right {
+      border-radius: 100% 0 0 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    } 
+
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="dot top-left"></div>
+    <div class="dot bottom-right"></div>
+  </div>
+</body>
+</html>
