@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>js监听页面滑动到底部</title>
+</head>
+<body>
+<div class="main">
+  <h3>
+    js判断滚动条是否到底部
+  </h3>
+  <p>
+    使用js判断滚动条是否到底部，我们要用到scrollTop、clientHeight、scrollHeight这三个dom属性值，分别通过原生js实现判断滚动条是否到底部和jquery的方式实现判断滚动条到底部。以对象的方式
+  </p>
+  <h3>判断滚动条的三个dom属性</h3>
+  <p>
+    scrollTop为滚动条在Y轴上的滚动距离。<br/>
+    clientHeight为内容可视区域的高度。 <br/>
+    scrollHeight为内容可视区域的高度加上溢出（滚动）的距离。 <br/>
+    由这些dom属性可知：滚动条到底部的公式为：scrollTop + clientHeight == scrollHeight <br/>
+  </p>
+  <h3>原生js语法判断滚动条是否到底部</h3>
+  <p>
+    <pre>
+      
+  var scrollToBottom = {
+      getScrollTop:function(){
+          var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+          if(document.body){
+              bodyScrollTop = document.body.scrollTop;
+          }
+          if(document.documentElement){
+              documentScrollTop = document.documentElement.scrollTop;
+          }
+          scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+          return scrollTop;
+      },
+      getScrollHeight:function(){
+          var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+          if(document.body){
+              bodyScrollHeight = document.body.scrollHeight;
+          }
+          if(document.documentElement){
+              documentScrollHeight = document.documentElement.scrollHeight;
+          }
+          scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+          return scrollHeight;
+      },
+      getClientHeight:function(){
+          var windowHeight = 0;
+          if(document.compatMode == "CSS1Compat"){
+              windowHeight = document.documentElement.clientHeight;
+          }else{
+              windowHeight = document.body.clientHeight;
+          }
+          return windowHeight;
+      },
+      onScrollEvent:function(callback){
+          var This = this;
+          window.onscroll = function(){
+              if(This.getScrollTop() + This.getClientHeight() >= This.getScrollHeight()){
+                  typeof callback == "function" && callback.call(this);
+              }
+          }
+      }
+  };
+
+  scrollToBottom.onScrollEvent(function(){
+      alert("滚动条到底部了");
+  });
+    </pre>
+  </p>
+  <h3>
+    jquery实现判断滚动条是否到底部
+  </h3>
+  <p>
+    <pre>
+      var $document = $(document);//缓存一下$(document)
+      $(window).scroll(function(){
+      　　var $this = $(this),
+              scrollTop = $this.scrollTop(),
+              scrollHeight = $document.height(),
+              windowHeight = $this.height();
+      　　if(scrollTop + windowHeight >= scrollHeight){
+      　　　　alert("jquery实现滚动条到底部判断了");
+      　　}
+      });
+
+    </pre>
+  </p>
+  <h3>
+    获取任意容器滚动条是否到底部
+  </h3>
+  <p>
+    将document.body换成特定的容器，获取scrollTop和scrollHeight的方式不变，获取元素可见高度要使用offsetHeight属性，其他计算方法相同
+  </p>
+</div>
+<script type="text/javascript">
+  
+  var scrollToBottom = {
+    getScrollTop:function(){
+        var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+        if(document.body){
+            bodyScrollTop = document.body.scrollTop;
+        }
+        if(document.documentElement){
+            documentScrollTop = document.documentElement.scrollTop;
+        }
+        scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+        return scrollTop;
+    },
+    getScrollHeight:function(){
+        var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+        if(document.body){
+            bodyScrollHeight = document.body.scrollHeight;
+        }
+        if(document.documentElement){
+            documentScrollHeight = document.documentElement.scrollHeight;
+        }
+        scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+        return scrollHeight;
+    },
+    getClientHeight:function(){
+        var windowHeight = 0;
+        if(document.compatMode == "CSS1Compat"){
+            windowHeight = document.documentElement.clientHeight;
+        }else{
+            windowHeight = document.body.clientHeight;
+        }
+        return windowHeight;
+    },
+    onScrollEvent:function(callback){
+        var This = this;
+        console.log(this);
+        window.onscroll = function(){
+            if(This.getScrollTop() + This.getClientHeight() >= This.getScrollHeight()){
+                typeof callback == "function" && callback.call(this);
+            }
+        }
+    }
+  };
+
+  scrollToBottom.onScrollEvent(function(){
+      alert("滚动条到底部了");
+  });
+
+  // jquery 写法
+  // var $document = $(document);//缓存一下$(document)
+  // $(window).scroll(function(){
+  // 　　var $this = $(this),
+  //         scrollTop = $this.scrollTop(),
+  //         scrollHeight = $document.height(),
+  //         windowHeight = $this.height();
+  // 　　if(scrollTop + windowHeight >= scrollHeight){
+  // 　　　　alert("jquery实现滚动条到底部判断了");
+  // 　　}
+  // });
+
+
+</script>
+</body>
+</html>
