@@ -363,3 +363,21 @@ table tr th {
 .bar.green p {
   background: #52a568;
 }
+
+input, select {
+  border: 1px solid #ddd;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 6px;
+  border-radius: 4px;
+  min-width: 160px;
+}
+.nav-pill {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+.nav-pill .nav-tabs li{
+  float: left;
+  padding: 6px 14px;
+
+}
