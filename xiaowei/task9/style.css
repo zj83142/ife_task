@@ -322,3 +322,44 @@ div[class*="col-"] {
   padding: 15px;
 }
 
+table {
+  border-spacing: 1px;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+table tr td,
+table tr th {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+}
+
+.bar {
+  width: 200px;
+  height: 6px;
+  background: #ddd;
+  display: inline-block;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+
+.bar p {
+  height: 100%;
+  border-radius: 2px;
+}
+.bar.orange p {
+  background: #f7850c;
+}
+.bar.yellow p {
+  background: #efce24;
+}
+.bar.teal p {
+  background: #43b29e;
+}
+.bar.blue p {
+  background: #388ac1;
+}
+.bar.green p {
+  background: #52a568;
+}
