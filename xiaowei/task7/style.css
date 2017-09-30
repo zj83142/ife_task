@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul, li {
+  list-style: none;
+}
+input {
+  height: 32px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clearfix:after {
+  content:"."; 
+  display:block; 
+  height:0; 
+  visibility:hidden; 
+  clear:both;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fa {
+  margin-right: 6px;
+}
+
+
+/*-------------header---------------*/
+.header {
+  height: 60px;
+  background: #fff;
+  padding: 0 5%;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,.1);
+}
+.header .logo{
+  font-size: 22px;
+  line-height: 60px;
+  height: 60px;
+  padding-left: 38px;
+  background: url(./logo.png) no-repeat 0 14px;
+}
+.nav li{
+  float: left;
+  width: 80px;
+  margin: 0 15px;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+.nav li.active {
+  border-bottom: 4px solid #E74F4D;
+}
+.nav li:last-child {
+  color: #E74F4D;
+}
+
+/*-------------banner---------------*/
+.banner {
+  background: url(./banner-bg.png) no-repeat;
+  background-size: cover;
+  height: 854px;
+  padding: 0 5%;
+  color: #fff;
+}
+.banner .message {
+  padding-top: 300px;
+  padding-left: 10%;
+}
+.banner .message .title{
+  font-size: 5em;
+
+}
+.banner .message p{
+  margin: 20px 0 60px 0;
+  width: 226px;
+}
+.banner .message .btn{
+  width: 240px;
+  display: inline-block;
+  background: #E74F4D;
+  text-align: center;
+  height: 56px;
+  line-height: 56px;
+  color: #fff;
+  font-size: 1.6em;
+}
+/*-------------features---------------*/
+.features {
+  padding: 40px 5%;
+}
+.features .f-item {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.features .f-item img {
+  margin: 30px 0;
+}
+.features .f-item p {
+  padding: 0 26%;
+  border-right: 1px solid #b6b6b6;
+}
+.features .f-item:last-child p{
+  border-right: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.email-info {
+  background: #32353E;
+  padding: 120px 0 60px 0;
+  color: #c9c9c9;
+}
+.email {
+  margin: 0 auto;
+  width: 460px;
+}
+.email h3 {
+  margin: 10px 0;
+}
+.email .desp {
+  font-size: 13px;
+  margin: 0 20px 40px 20px;
+}
+.email input {
+  width: 100%;
+  height: 42px;
+  margin-right: -80px;
+  float: left;
+}
+.email .btn-submit {
+  display: inline-block;
+  float: right;
+  width: 80px;
+  background: #6F7178;
+  color: #fff;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+.email .links {
+  width: 240px;
+  margin: 0 auto;
+}
+.email .links li {
+  float: left;
+  
+}
+.email .links li .fa {
+  font-size: 2em;
+  color: #fff;
+  width: 60px;
+  margin: 40px 0;
+}
+.footer {
+  background: #303039;
+  padding: 0 5%;
+}
+.footer span{
+  color: #fff;
+  margin: 15px 0;
+  display: block;
+}
