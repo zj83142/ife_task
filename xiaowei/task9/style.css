@@ -13,7 +13,7 @@ a {
 body {
   font-size: 14px;
   font-family: Microsoft YaHei,-apple-system,PingFang SC,Hiragino Sans GB,Arial,Helvetica Neue,sans-serif;
-  min-width: 1280px;
+  min-width: 1480px;
 }
 
 .clearfix:after,
@@ -247,10 +247,19 @@ div[class*="col-"] {
   width: 15%;
   float: left;
   margin-right: 1.66%;
+  text-align: center;
 }
 
 .cards .card-item.active {
   border-top: 4px solid #388ac1;
+}
+.card-item > p {
+  color: #989898;
+  font-size: 1.2em;
+}
+.card-item > p > span {
+  font-size: 1.5em;
+  color: #ff7d00;
 }
 .slip-btn {
   width: 32px;
@@ -268,9 +277,6 @@ div[class*="col-"] {
   position: absolute;
   right: 10px;
 }
-
-
-
 .month-data .segment {
 }
 .month-data .segment p {
@@ -372,12 +378,173 @@ input, select {
   border-radius: 4px;
   min-width: 160px;
 }
+
 .nav-pill {
-  border: 1px solid #ddd;
-  padding: 15px;
+  margin: 15px;
 }
 .nav-pill .nav-tabs li{
   float: left;
   padding: 6px 14px;
-
+  background: #ccc;
+  margin-right: 4px;
+  border-radius: 6px;
 }
+.nav-pill .nav-tabs li.active{
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #ddd;
+  border-bottom: 2px solid #fff;
+  margin-bottom: -1px;
+}
+.nav-pill .nav-content {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+.history {
+  text-align: center;
+  font-size: 1.8em;
+  line-height: 60px;
+}
+.history .fa{
+  color: #388ac1;
+  margin: 10px;
+}
+.bottom15 {
+  margin-bottom: 15px;
+}
+button {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+.search-btn {
+  width: 64px;
+  background: #388ac1;
+  color: #fff;
+}
+.search-btn:hover {
+  background: #14527c;
+}
+
+.first-item .summary {
+  border: 1px solid #d8d8db;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.first-item .summary input,
+.first-item .summary textarea {
+  border: none;
+}
+.first-item .summary p {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  color: #aaa;
+  background: #f4f5f6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid #e7e8eb;
+}
+
+.first-item .summary form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.first-item .summary form label {
+  color: #c3c2c2;
+}
+
+.first-item .summary form input[type="text"], .first-item .summary form textarea {
+  width: 100%;
+  padding: 7px 0 10px 16px;
+  font: 12px/12px "Microsoft YaHei";
+  color: #535353;
+  min-width: auto;
+}
+
+.first-item .summary form .title {
+  margin-top: 17px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.first-item .summary form .price, .first-item .summary form .director, .first-item .summary form .description {
+  padding: 4px;
+}
+
+.first-item .summary form .price {
+  float: left;
+  width: 30%;
+  border-right: 1px solid #e7e7e7;
+}
+
+.first-item .summary form .director {
+  float: left;
+  width: 70%;
+}
+
+.first-item .summary form .description {
+  clear: both;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.first-item .summary form .description textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+}
+
+.first-item .summary form .search {
+  margin-top: 10px;
+  line-height: 30px;
+}
+
+.first-item .summary form .search .agreement {
+  float: left;
+  margin-top: 10px;
+}
+
+.first-item .summary form .search input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  min-width: 16px;
+  border: none;
+  vertical-align: middle;
+  background: #d6d6d6;
+}
+
+table.calendar td,
+table.calendar th{
+  border-right: none;
+  border-left: none;
+}
+
+table.calendar td{
+  border: none;
+}
+
+table.calendar td p{
+  width: 50px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+table.calendar tbody tr td:nth-child(6) p:nth-child(1),
+table.calendar tbody tr td:nth-child(7) p:nth-child(1),
+table.calendar td p.red{
+  color: #f06e0f;
+}
+table.calendar tbody tr td a {
+  border: 1px solid #fff;
+  padding: 0 6px;
+  display: inline-block;
+}
+table.calendar tbody tr td a:hover {
+  border: 1px solid #f7850c;
+}
+

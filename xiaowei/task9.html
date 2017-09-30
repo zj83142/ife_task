@@ -83,50 +83,63 @@
         <li><a href="">文档一</a></li>
       </ul>
       <div class="main-content">
-        <div class="segment">
-          <form>
-            <div>
-              查询项
+        <div class="segment ">
+          <form class="row">
+            <div class="col-2">
+              <label>查询项</label>
               <select>
                 <option value="">第一项</option>
                 <option value="">第二项</option>
               </select>
             </div>
-            <div>
-              买方
-              <select>
-                <option value="">小红</option>
-                <option value="">小黄</option>
-              </select>
-              卖方
-              <select>
-                <option value="">小黑</option>
-                <option value="">小绿</option>
-              </select>
+            <div class="col-3">
+              <div class="bottom15">
+                <label>买方</label>
+                <select>
+                  <option value="">小红</option>
+                  <option value="">小黄</option>
+                </select>
+              </div>
+              <div>
+                <label>卖方</label>
+                <select>
+                  <option value="">小黑</option>
+                  <option value="">小绿</option>
+                </select>
+              </div>
+              
+              
             </div>
-            <div>
-              日期
-              <input type="" name="" value="2016-04-01" />
-              总耗时
-              <select>
-                <option value="">8天</option>
-                <option value="">9天</option>
-                <option value="">10天</option>
-              </select>
-              人数
-              <select>
-                <option value="">10人</option>
-                <option value="">11人</option>
-                <option value="">12人</option>
-              </select>
-              成交项
-              <select>
-                <option value="">10项</option>
-                <option value="">11项</option>
-                <option value="">12项</option>
-              </select>
+            <div class="col-4">
+              <div class="bottom15">
+                <label>日期</label>
+                <input type="" name="" value="2016-04-01" />
+                <label>总耗时</label>
+                <select style="min-width: 120px;">
+                  <option value="">8天</option>
+                  <option value="">9天</option>
+                  <option value="">10天</option>
+                </select>
+              </div>
+              <div>
+                <label>人数</label>
+                <select style="min-width: 120px;">
+                  <option value="">10人</option>
+                  <option value="">11人</option>
+                  <option value="">12人</option>
+                </select>
+                <label>成交项</label>
+                <select style="min-width: 184px;">
+                  <option value="">10项</option>
+                  <option value="">11项</option>
+                  <option value="">12项</option>
+                </select>
+              </div>
             </div>
-            <a>搜索</a>
+            <div class="col-1">
+              <button class="search-btn" style="margin-top: 26px;">搜索</button>
+            </div>
+            
           </form>
         </div>
         <br/>
@@ -163,14 +176,13 @@
           </div>
           <div class="col-3 ">
             <div class="history">
-              <i class="fa fa-calendar"></i>
-              历史查询
+              <i class="fa fa-calendar"></i>历史查询
             </div>
           </div>
         </div>
         <br/>
         <div class="month-data">
-          <h4>2016年4月份统计</h4>
+          <h4 style="margin-bottom: 10px;">2016年4月份统计</h4>
           <div class="row">
             <div class="col-3">
               <div class="segment clearfix teal">
@@ -215,10 +227,10 @@
           <div class="col-7">
             <div class="pannel">
               <div class="pannel-header">第一组项目</div>
-              <div class="pannel-content">
+              <div class="pannel-content" >
                 <div class="nav-pill">
-                  <ul class="nav-tabs">
-                    <li><a href="">项目一</a></li>
+                  <ul class="nav-tabs clearfix">
+                    <li class="active"><a href="">项目一</a></li>
                     <li><a href="">项目二</a></li>
                     <li><a href="">项目三</a></li>
                     <li><a href="">项目四</a></li>
@@ -271,36 +283,35 @@
             </div>
           </div>
           <div class="col-5">
-            <div class="pannel">
+            <div class="pannel first-item clearfix">
               <div class="pannel-header">第二组项目</div>
-              <div class="pannel-content">
+              <div class="pannel-content summary">
                 <form action="">
-                  <div>
+                  <div class="title">
                     <label>标题</label>
-                    <input type="" name="" value="项目报表三" />
+                    <input type="text" name="title" value="项目报表三">
                   </div>
-                  <div>
-                    <div>
-                      <label>价格</label>
-                      <input type="" name="" value="￥158" />
-                    </div>
-                    <div>
-                      <label>负责人</label>
-                      <input type="" name="" value="小红" />
-                    </div>
+                  <div class="price">
+                    <label>价格</label>
+                    <input type="text" name="price" value="￥ 158">
                   </div>
-                  <div>
+                  <div class="director">
+                    <label>负责人</label>
+                    <input type="text" name="director" value="小A">
+                  </div>
+                  <div class="description">
                     <label>详细描述</label>
-                    <textarea name="" id="" cols="30" rows="10">该项目目前负责人是……</textarea>
+                    <textarea>该项目目前负责人是……</textarea>
                   </div>
-                  <div>
-                    <div>
-                      <input type="checkbox" name="" />
+                  <div class="search clearfix">
+                    <div class="agreement">
+                      <input type="checkbox" name="agreement">
                       <label>遵守保密协议</label>
                     </div>
-                    <button>搜索</button>
+                    <button class="search-btn right" style="margin-top: 10px;">搜索</button>
                   </div>
                 </form>
+                <br/>
               </div>
             </div>
           </div>
@@ -311,7 +322,7 @@
             <div class="pannel">
               <div class="pannel-header">日历</div>
               <div class="pannel-content">
-                <div>
+                <div class="bottom15">
                   <select>
                     <option value="">2017年</option>
                     <option value="">2016年</option>
@@ -327,7 +338,7 @@
                   <button>标注日期</button>
                   <button>返沪今天</button>
                 </div>
-                <table>
+                <table class="calendar">
                   <thead>
                     <tr>
                       <th width="14%">一</th>
@@ -360,7 +371,7 @@
                       <td>
                         <a>
                           <p>3</p>
-                          <p>抗战胜利日</p>
+                          <p class="red">抗战胜利日</p>
                         </a>
                       </td>
                     </tr>
@@ -374,7 +385,7 @@
                       <td>
                         <a>
                           <p>5</p>
-                          <p>中元节</p>
+                          <p class="red">中元节</p>
                         </a>
                       </td>
                       <td>
@@ -386,7 +397,7 @@
                       <td>
                         <a>
                           <p>7</p>
-                          <p>白露</p>
+                          <p class="red">白露</p>
                         </a>
                       </td>
                       <td>
@@ -404,7 +415,7 @@
                       <td>
                         <a>
                           <p>10</p>
-                          <p>教师节</p>
+                          <p class="red">教师节</p>
                         </a>
                       </td>
                     </tr>
@@ -486,7 +497,7 @@
                       <td>
                         <a>
                           <p>23</p>
-                          <p>秋分</p>
+                          <p class="red">秋分</p>
                         </a>
                       </td>
                       <td>
@@ -540,6 +551,7 @@
                   </tbody>
                 </table>
               </div>
+              <br/>
             </div>
           </div>
           <div class="col-7">
