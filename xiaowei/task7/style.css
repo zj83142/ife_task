@@ -260,7 +260,7 @@ input {
 
 /*---------------------articles-------------------------*/
 .articles {
-  margin: 40px 0;
+
 }
 .new-world .title{
   width: 66%;
@@ -348,7 +348,7 @@ input {
 .new-time .content {
   width: 33%;
   float: left;
-  height: 640px;
+  height: 708px;
 }
 .new-time .content.red {
   background: #ff6161;
